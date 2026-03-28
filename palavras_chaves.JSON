@@ -1,0 +1,49 @@
+{
+    "urgencia": [
+    "urgente",
+    "ação imediata",
+    "última chance",
+    "agora ou nunca",
+    "expira hoje",
+    "prazo final",
+    "conta será bloqueada",
+    "confirmação imediata",
+    "verifique agora",
+    "responda imediatamente"
+  ],
+  "dinheiro": [
+    "prêmio",
+    "você ganhou",
+    "bônus",
+    "saque disponível",
+    "dinheiro liberado",
+    "transferência pendente",
+    "recompensa",
+    "cashback",
+    "lucro garantido",
+    "renda extra"
+  ],
+  "seguranca": [
+    "verificação de segurança",
+    "atividade suspeita",
+    "redefinir senha",
+    "confirmar identidade",
+    "login necessário",
+    "acesso bloqueado",
+    "proteção da conta",
+    "atualização obrigatória",
+    "autenticação"
+    ],
+
+    "medo":[
+    "processo judicial",
+    "multa",
+    "dívida pendente",
+    "irregularidade",
+    "CPF bloqueado",
+    "negativado",
+    "cobrança"
+
+    ]
+
+}

@@ -1,0 +1,65 @@
+{
+  "financeiro": [
+    "banco",
+    "bradesco",
+    "itau",
+    "caixa",
+    "nubank",
+    "pagamento",
+    "fatura",
+    "cartao",
+    "credito",
+    "debito",
+    "pix",
+    "transferencia"
+  ],
+  "acesso_conta": [
+    "login",
+    "entrar",
+    "acessar",
+    "conta",
+    "usuario",
+    "senha",
+    "verificacao",
+    "confirmar",
+    "validar",
+    "autenticacao"
+  ],
+  "urgencia": [
+    "urgente",
+    "agora",
+    "imediato",
+    "bloqueado",
+    "suspenso",
+    "expirado",
+    "limite",
+    "prazo"
+  ],
+  "beneficios": [
+    "premio",
+    "bonus",
+    "gratis",
+    "ganhe",
+    "ganhou",
+    "oferta",
+    "promocao",
+    "cashback",
+    "recompensa"
+  ],
+  "suporte": [
+    "suporte",
+    "ajuda",
+    "atendimento",
+    "central",
+    "sac",
+    "cliente"
+  ],
+  "entrega": [
+    "entrega",
+    "correios",
+    "encomenda",
+    "rastreamento",
+    "pacote",
+    "frete"
+  ]
+}
