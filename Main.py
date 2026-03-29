@@ -4,9 +4,10 @@ uteis.interface.menu()
 
 link = str(input("Cole ou Digite o Link suspeito: ")).strip()
 
-uteis.verificar_dominio.encurtador(link)
-uteis.verificar_dominio.extencoes_suspeitas(link)
-uteis.verificar_dominio.palavras_perigosas(link)
+uteis.imitacao.encurtador(link)
+uteis.imitacao.extencoes_suspeitas(link)
+resultado = uteis.imitacao.palavras_perigosas(link)
+
 # mensagem = str(input("Cole ou Digite a Mensagem suspeita: ")).strip()
 
 # uteis.palavras_suspeitas.detector_palavras(mensagem)
