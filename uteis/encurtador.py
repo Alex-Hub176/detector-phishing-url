@@ -8,6 +8,18 @@ def encurtador(link):
 
     suspeito = urlparse(link).netloc.lower()
 
+    score = 0
+    motivos = []
+
     for encurtador in encurtadores:
         if suspeito.endswith(encurtador):
-            return 2
+            score = 2
+            motivos.append(f"Uso de encurtador [{encurtador}]")
+        
+    
+    resultado = {
+        "score":score,
+        "motivos":motivos
+    }
+
+    return resultado

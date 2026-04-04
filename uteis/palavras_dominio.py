@@ -9,9 +9,17 @@ def palavras_perigosas(link):
 
     site_suspeito = urlparse(link).netloc
 
+    score = 0
+    motivos = []
     for categoria, palavras in palavras_perigosas.items():
         for palavra in palavras:
             if palavra in site_suspeito:
-                return 2    
+                score = 2 
+                motivos.append(f"Palavra suspeita [{palavra}] da categoria [{categoria}]")
 
+    resultado = {
+        "score":score,
+        "motivos":motivos
+    }
 
+    return resultado

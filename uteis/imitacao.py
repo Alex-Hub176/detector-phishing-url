@@ -14,18 +14,32 @@ def imitacao(link):
     caracteres_exemplo = ["1","0","@","3"]
 
     score = 0
+    motivos = []
     for marca in marcas:
         if marca in site:
-            score += 1      
+            score += 1    
+            motivos.append(f"Marca suspeita [{marca}]")
+            break  
 
     for categoria, palavras in palavras_perigosas.items():
         for p in palavras:
             if marca and p in site:
                 score += 5
+                motivos.append(f"Palavras suspeita [{p}] com a marca [{marca}]")
 
     for caracteres in caracteres_exemplo:
         if caracteres in site:
             score += 4
+            motivos.append(f"Caractere Trocado [{caracteres}]")
             
-    return score    
+    resultado = {
+        "score":score,
+        "motivos":motivos
+    }
+
+    return resultado
+
+
+
+
         
