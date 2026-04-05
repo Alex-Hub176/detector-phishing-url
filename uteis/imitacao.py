@@ -13,19 +13,21 @@ def imitacao(link):
     site = urlparse(link).netloc.lower()
     caracteres_exemplo = ["1","0","@","3"]
 
+    marca = None
     score = 0
     motivos = []
-    for marca in marcas:
-        if marca in site:
+    for m in marcas:
+        if m in site:
+            marca = m
             score += 1    
             motivos.append(f"Marca suspeita [{marca}]")
             break  
 
     for categoria, palavras in palavras_perigosas.items():
-        for p in palavras:
-            if marca and p in site:
+        for palavra in palavras:
+            if marca is not None and palavra in site:
                 score += 5
-                motivos.append(f"Palavras suspeita [{p}] com a marca [{marca}]")
+                motivos.append(f"Palavras suspeita [{palavra}] com a marca [{marca}]")
 
     for caracteres in caracteres_exemplo:
         if caracteres in site:
