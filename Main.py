@@ -9,8 +9,8 @@ site = str(input("Site suspeito: ")).strip().lower()
 url = urlparse(site).netloc.lower()
 
 
-score = verificador_geral.contador(site)[-1]
-motivos = verificador_geral.contador(site)[:-1]
+score = verificador_geral.contador(site,mensagem)[-1]
+motivos = verificador_geral.contador(site,mensagem)[:-1]
 uteis.interface.linha()
 
 if score >= 0 and score  <=2:

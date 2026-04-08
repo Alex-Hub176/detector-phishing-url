@@ -1,14 +1,14 @@
 import uteis
 
 
-def contador(link=''):
+def contador(link='',texto=''):
     score = [
     
         uteis.encurtador.encurtador(link),
         uteis.extencoes_suspeitas.extencoes_suspeitas(link),
         uteis.imitacao.imitacao(link),
         uteis.palavras_dominio.palavras_perigosas(link),
-        uteis.palavras_suspeitas.detector_palavras(link)
+        uteis.palavras_suspeitas.detector_palavras(texto)
         
         ]
 
