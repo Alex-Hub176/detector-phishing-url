@@ -1,23 +1,35 @@
 import uteis
+import verificador_geral
+from urllib.parse import urlparse
 
 uteis.interface.menu()
+mensagem  = str(input("Mensagem: ")).strip().lower()
+site = str(input("Site suspeito: ")).strip().lower()
 
-link = str(input("Cole ou Digite o Link suspeito: ")).strip()
+url = urlparse(site).netloc.lower()
 
-uteis.imitacao.encurtador(link)
-uteis.imitacao.extencoes_suspeitas(link)
-resultado = uteis.imitacao.palavras_perigosas(link)
 
-# mensagem = str(input("Cole ou Digite a Mensagem suspeita: ")).strip()
+score = verificador_geral.contador(site)[-1]
+motivos = verificador_geral.contador(site)[:-1]
+uteis.interface.linha()
 
-# uteis.palavras_suspeitas.detector_palavras(mensagem)
+if score >= 0 and score  <=2:
+    nivel = "Seguro"
+elif score >= 3 and score <= 5:
+    nivel = "Suspeito"
+elif score >= 6 and score <= 9:
+    nivel = "Alto risco"
+elif score >= 10:
+    nivel = "Phishing"
+
+
     
-    
-# match escolha:
-#     case 1:
-#         uteis.verificar_dominio.encurtador("https://notebooklm.google.com/notebook/444a5e69-367e-496a-a620-ca167dae63e5")
+print(f""" 
+[URL]: {url}
+[Resultado]: {nivel}
+[Score]: {score}
+[Motivos]: """)
+for motivo in motivos:
+    print(motivo)
 
-#     case 2:
-#         mensagem = str(input("Digite ou cole a mensagem suspeita: ")).lower()
-#         uteis.palavras_suspeitas.detector_palavras(mensagem)
 
