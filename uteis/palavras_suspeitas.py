@@ -12,7 +12,7 @@ def detector_palavras(texto):
         for palavras in lista_palavras:
             if palavras in texto:
                 score = 3
-                motivos.append(f"item suspeito [{palavras}] da categoria [{categoria}]")
+                motivos.append(f"Item suspeito [{palavras}] da categoria [{categoria}]")
                 
     
     resultado = {

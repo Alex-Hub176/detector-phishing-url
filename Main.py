@@ -9,11 +9,12 @@ site = str(input("Site suspeito: ")).strip().lower()
 url = urlparse(site).netloc.lower()
 
 
-score = verificador_geral.contador(site,mensagem)[-1]
-motivos = verificador_geral.contador(site,mensagem)[:-1]
+resultado = verificador_geral.contador(site,mensagem)
+score = resultado[-1]
+motivos = resultado[:-1]
 uteis.interface.linha()
 
-if score >= 0 and score  <=2:
+if score <=2:
     nivel = "Seguro"
 elif score >= 3 and score <= 5:
     nivel = "Suspeito"
