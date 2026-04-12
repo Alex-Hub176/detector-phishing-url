@@ -2,7 +2,7 @@ import json
 
 
 def detector_palavras(texto):
-    with open("dados/palavras_chaves.json", "r") as arquivo:
+    with open("dados/palavras_chaves.json", "r", encoding="utf-8") as arquivo:
         palavras_chaves = json.load(arquivo)
 
 
